@@ -1,0 +1,12 @@
+language: node_js
+
+matrix:
+  - CI_MODE=test
+
+install:
+  - npm install
+
+script:
+  - ./scripts/ci/angular.sh
+  - ./scripts/ci/build.sh
+  - ./scripts/ci/offline_compiler_test.sh

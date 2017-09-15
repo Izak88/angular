@@ -26,5 +26,5 @@ else
     node --max-old-space-size=3000 dist/all/@angular/tsc-wrapped/src/main -p packages
     node --max-old-space-size=3000 dist/all/@angular/tsc-wrapped/src/main -p modules
   fi
-  node dist/tools/tsc-watch/ $1 watch $2
+  node dist/tools/tsc-watch/ $1
 fi
