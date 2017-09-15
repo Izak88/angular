@@ -19,7 +19,7 @@ pipeline {
         stage('test') {
             steps {
 		timestamps {
-		sh './scripts/ci/offline_compiler_test.sh'
+		sh './test.sh node'
 		}
             }
         }

@@ -9,4 +9,4 @@ install:
 script:
   - ./scripts/ci/angular.sh
   - ./scripts/ci/build.sh
-  - ./scripts/ci/offline_compiler_test.sh
+  - ./test.sh node
