@@ -3,18 +3,24 @@ pipeline {
     stages {
 	stage('install') {
 	   steps {
+		timestamps {
 		sh 'npm install'
+		}
 	   }
 	}
 	stage('build') {
 	    steps {
+		timestamps {
 		sh './scripts/ci/angular.sh'
 		sh './scripts/ci/build.sh'
+		}
 	    }
 	}
         stage('test') {
             steps {
+		timestamps {
 		sh './scripts/ci/offline_compiler_test.sh'
+		}
             }
         }
     }
