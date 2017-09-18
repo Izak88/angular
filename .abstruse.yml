@@ -1,9 +1,10 @@
 image: abstruse
 
 matrix:
-  - CI_MODE=test
+  - CI_MODE=test NODE_VERSION=8
 
 install:
+        - nvm install $NODE_VERSION
   - npm install
 
 script:
