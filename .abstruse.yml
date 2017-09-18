@@ -1,7 +1,7 @@
 image: abstruse
 
 matrix:
-  - env: SCRIPT=test NODE_VERSION=8
+  - env: NODE_VERSION=8
 
 install:
   - nvm install $NODE_VERSION
@@ -11,3 +11,6 @@ script:
   - ./scripts/ci/angular.sh
   - ./scripts/ci/build.sh
   - ./test.sh node
+
+cache:
+  - node_modules
